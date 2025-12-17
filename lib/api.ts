@@ -101,7 +101,7 @@ export const categoryAPI = {
     const http = createAxios(token, {
       headers: { "Content-Type": "multipart/form-data" },
     })
-    return http.patch(`/category/${id}`, data)
+    return http.put(`/category/${id}`, data)
   },
 
   deleteCategory: async (id: string, token: string) => {
