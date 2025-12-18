@@ -305,7 +305,7 @@ const { data: itemTypeConfig, isLoading: itemTypeLoading } = useQuery<ItemTypeCo
             ? updateItemType.mutate({ body: values })
             : createItemType.mutate({
                 ...values,
-                categoryId: expandedCategoryId,
+                productCategory: expandedCategoryId,
               })
         }
         isLoading={createItemType.isPending || updateItemType.isPending}

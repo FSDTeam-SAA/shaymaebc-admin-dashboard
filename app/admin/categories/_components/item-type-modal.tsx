@@ -73,7 +73,7 @@ export function ItemTypeModal({
               itemType
             </label>
             <Input
-              placeholder="Item types (Women, Men)"
+              placeholder="Item types"
               value={itemType}
               onChange={(e) => setItemType(e.target.value)}
             />
