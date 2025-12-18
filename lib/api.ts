@@ -110,6 +110,34 @@ export const categoryAPI = {
   },
 }
 
+// -------------------- Item Type APIs --------------------
+// -------------------- Item Type APIs --------------------
+export const itemTypeAPI = {
+  getItemTypeByCategory: async (categoryId: string, token: string) => {
+    const http = createAxios(token)
+    return http.get(`/product/itemTypes/${categoryId}`)
+  },
+
+  createItemType: async (body: any, token: string) => {
+    const http = createAxios(token)
+    return http.post("/product/itemTypes", body)
+  },
+
+  updateItemType: async (id: string, body: any, token: string) => {
+    const http = createAxios(token)
+    return http.put(`/product/itemTypes/${id}`, body)
+  },
+
+  deleteItemType: async (id: string, token: string) => {
+    const http = createAxios(token)
+    return http.delete(`/product/itemTypes/${id}`)
+  },
+}
+
+
+
+
+
 // -------------------- Order APIs --------------------
 export const orderAPI = {
   getOrders: async (token: string, page = 1, limit = 10) => {
