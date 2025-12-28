@@ -64,12 +64,8 @@ export default function SellersPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <div className="flex justify-between items-center">
+            <div className="">
               <CardTitle>All Sellers</CardTitle>
-              <div className="bg-black text-white px-4 py-2 rounded">
-                <p className="text-sm">Total Seller</p>
-                <p className="text-lg font-bold">₹ 4,200.00</p>
-              </div>
             </div>
           </CardHeader>
           <CardContent>
@@ -93,7 +89,7 @@ export default function SellersPage() {
                     <tbody>
                       {(data?.sellers || []).map((seller: any) => (
                         <tr key={seller._id} className="border-b hover:bg-gray-50">
-                          <td className="py-3 px-4">{seller._id}</td>
+                          <td className="py-3 px-4">{seller._id.slice(-6)}</td>
                           <td className="py-3 px-4 flex items-center gap-3">
                             {seller.avatar?.url && (
                               <img
