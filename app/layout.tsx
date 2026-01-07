@@ -13,7 +13,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Admin Dashboard",
   description: "Admin dashboard for managing products, orders, and users",
-  generator: "v0.app",
+  generator: "admin.app",
 };
 
 export default function RootLayout({
