@@ -1,7 +1,7 @@
 // lib/api.ts
 import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios"
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000/api"
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 /**
  * Create a fresh axios instance for each call/token to avoid leaking Authorization
