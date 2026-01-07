@@ -45,7 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = async (email: string, password: string) => {
     setIsLoading(true)
     try {
-      const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000/api"
+      const baseURL = process.env.NEXT_PUBLIC_BASE_URL
       const response = await fetch(`${baseURL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
